@@ -46,17 +46,32 @@ Text file can be updated to run movie-this for a movie name, or concert-this for
 
 ## concert-this
 With name of venue, venue location, date of event using moment MM/DD/YYYY
+
 ![Alt Text](https://gyazo.com/8729ba02b5f6e83408b5a04b054b16b3.gif)
 
 ## spotify-this-song
 With artist, song name, song preview link, album
 
+![Alt Text](https://gyazo.com/775e902cf902c5c9c5e22a37efbc8ca5.gif)
+
+Default with no input in argument 3
+
+![Alt Text](https://gyazo.com/7a5a9dccbcd6b1521ab818992d66689f.gif)
+
+## Readme break time! Random Kitty Gif:
+
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 ## movie-this
 With Title of movie, year, IMDB rating, rotten tomatoes rating, country produced, language, plot, actors
+
+![Alt Text](x)
+
+Default with no input in argument 3
+
+![Alt Text](x)
 
 ## do-what-it-says
 Runs spotify-this-song
 
-Readme break time! Random Kitty Gif:
-
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](x)
