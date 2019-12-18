@@ -46,7 +46,7 @@ Text file can be updated to run movie-this for a movie name, or concert-this for
 
 ## concert-this
 With name of venue, venue location, date of event using moment MM/DD/YYYY
-![Alt Text](https://gyazo.com/8729ba02b5f6e83408b5a04b054b16b3)
+![Alt Text](https://gyazo.com/8729ba02b5f6e83408b5a04b054b16b3.gif)
 
 ## spotify-this-song
 With artist, song name, song preview link, album
