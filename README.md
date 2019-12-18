@@ -1,32 +1,48 @@
 # LIRI-bot
 Making a LIRI bot utilizing node
 
-### Basic Use
+12/18/19
+Version 1
+
+# Basic Use
 LIRI bot is a terminal based API searcher. A user can make searches by using the following commands:
 
-## node liri.js movie-this "movie name"
+### node liri.js movie-this "movie name"
 Searches OMDB API for the movie, and responds with info about the title, year released, rating, language, plot, actors
 
-# node liri.js spotify-this-song "song name"
+### node liri.js spotify-this-song "song name"
 Searches Spotify API for the song name, responds with artist name, an album name and a song preview link
 
-# node liri.js concert-this "artist name"
+### node liri.js concert-this "artist name"
 Searches bands in town API for an artist, and displays upcoming concerts with venue location and dates
 
-# node liri.js do-what-it-says
+### node liri.js do-what-it-says
 Reads a text file separate from the javascript file, and runs the spotify-this-song command for the song "I Want it That Way"
 Text file can be updated to run movie-this for a movie name, or concert-this for an artist
 
 # App Organization
+### liri.js
+1. npm packages required at the top
+2. readText function utilizes built in npm fs package to read the random.txt file and the data in the file as arguments for node command do-what-it-says
+3. getMovie function retrieves movie information from the OMDB API and displays info in the terminal
+4. getMusic function retrieves song information from Spotify's API and displays info in the terminal
+5. getConcert function retrieves concert information about an artist from the bands in town API and displays info in the terminal
+6. switcher function uses switch case to pass in argument 2 and argument 3 from the provess.argv array, and runs one of the four commands
 
-3. Give start-to-finish instructions on how to run the app
 4. Include screenshots, gifs or videos of the app functioning
-5. Contain a link to a deployed version of the app
-6. Clearly list the technologies used in the app
-7. State your role in the app development
+
+### Technologies used
+1. Javascript
+2. NodeJS packages
+3. bands in town API
+4. OMDB API
+5. Spotify API
+
+### Developers
+1. Miguel Delos Santos
 
 
-# Using Gifs:
+## Using Gifs:
 
 Readme break time! Random Kitty Gif:
 

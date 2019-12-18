@@ -59,7 +59,7 @@ Actors: ${response.data.Actors}`
     )
 }
 
-// Start Music Function, run with 
+// Start Music Function, run with spotify-this-song
 function getMusic(songName) {
 
     // If no song name, defaults The Sign by Ace
