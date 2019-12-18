@@ -85,28 +85,26 @@ function getConcert(bandName) {
     var queryURL = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
     axios.get(queryURL).then(
         function (response) {
+
+            // Loop that shows all events 
             for (let i = 0; i < response.data.length; i++) {
                 const show = response.data[i];
+                // console.log(show);
 
                 // Name of venue 
-                console.log("Venue Location: " + show.venue.name);
-                // Date of event 
-                console.log(moment(show.datetime).format("MM/DD/YYYY"));
-                // console.log
+                console.log("Venue Name: " + show.venue.name);
+
+                // Location of venue 
+                console.log("Location: " + show.venue.city + ", " + show.venue.region + ", " + show.venue.country);
+                // console.log("State: " + show.venue.region);
+                // console.log("City: " + show.venue.city);
+
+                // Time of show 
+                console.log("Show Time: " + moment(show.datetime).format("MM/DD/YYYY"));
+                console.log("--------------------")
             }
-            // console.log(response.data);
-
-            //  * Name of the venue
-
-            //             * Venue location
-
-            //                 * Date of the Event(use moment to format this as "MM/DD/YYYY")
-
-            // console.log(response.data)
-
         }
     )
-
 }
 // getMusic("7 rings");
 
