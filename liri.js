@@ -29,8 +29,8 @@ function readText() {
 // Get movie data using axios 
 function getMovie(movieName) {
 
-
-    var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+    var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
+    // var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
     axios.get(queryURL).then(
         function (response) {
             console.log(response.data);
@@ -78,6 +78,24 @@ function getMusic(songName) {
     });
 }
 
+// Get concert function 
+function getConcert(bandName) {
+    var queryURL = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
+    axios.get(queryURL).then(
+        function (response) {
+            console.log(response.data);
+            // * Title of the movie.
+            // * Year the movie came out.
+            // * IMDB Rating of the movie.
+            // * Rotten Tomatoes Rating of the movie.
+            // * Country where the movie was produced.
+            // * Language of the movie.
+            // * Plot of the movie.
+            // * Actors in the movie.
+        }
+    )
+
+}
 // getMusic("7 rings");
 
 // Node command to run the get Music function
@@ -96,6 +114,11 @@ function switcher(arg2, arg3) {
         case "do-what-it-says":
             readText();
             break;
+        case "movie-this":
+            getMovie(arg3);
+            break;
+        case "concert-this":
+
 
     }
 }
