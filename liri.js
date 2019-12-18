@@ -38,8 +38,18 @@ function getMovie(movieName) {
     var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
     axios.get(queryURL).then(
         function (response) {
-            console.log(response.data);
+            // console.log(response.data);
+
             // * Title of the movie.
+            console.log(`Title: ${response.data.Title}
+Year: ${response.data.Year}
+Rated: ${response.data.Rated}
+Rotten Tomatoes Rating: ${response.data.tomatoRating}
+Country Produced in: ${response.data.Country}
+Language: ${response.data.Language}
+Plot: ${response.data.Plot}
+Actors: ${response.data.Actors}`
+            );
             // * Year the movie came out.
             // * IMDB Rating of the movie.
             // * Rotten Tomatoes Rating of the movie.
