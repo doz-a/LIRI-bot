@@ -75,16 +75,16 @@ function getMusic(songName) {
         var trackObj = data.tracks.items[0];
 
         //  Artist(s)
-        console.log(trackObj.artists[0].name);
+        console.log(`Artist: ${trackObj.artists[0].name}`);
 
         //  The song's name
-        console.log(trackObj.name);
+        console.log(`Song Name: ${trackObj.name}`);
 
         //  A preview link of the song from Spotify
-        console.log(trackObj.external_urls.spotify);
+        console.log(`Preview Link: ${trackObj.external_urls.spotify}`);
 
         //  The album that the song is from
-        console.log(trackObj.album.name);
+        console.log(`Album Name: ${trackObj.album.name}`);
     });
 }
 
