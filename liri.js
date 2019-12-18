@@ -35,12 +35,17 @@ function readText() {
 // Get movie data, run with movie-this "movie"
 function getMovie(movieName) {
 
+    // If no movie name, do a search for Mr.Nobody
+    if (!movieName) {
+        var movieName = "Mr. Nobody";
+    }
+
     var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
     axios.get(queryURL).then(
         function (response) {
             // console.log(response.data);
 
-            // * Title of the movie.
+            // Movie info
             console.log(`Title: ${response.data.Title}
 Year: ${response.data.Year}
 Rated: ${response.data.Rated}
@@ -50,16 +55,8 @@ Language: ${response.data.Language}
 Plot: ${response.data.Plot}
 Actors: ${response.data.Actors}`
             );
-            // * Year the movie came out.
-            // * IMDB Rating of the movie.
-            // * Rotten Tomatoes Rating of the movie.
-            // * Country where the movie was produced.
-            // * Language of the movie.
-            // * Plot of the movie.
-            // * Actors in the movie.
         }
     )
-
 }
 
 // Start Music Function, run with 
@@ -124,7 +121,7 @@ function getConcert(bandName) {
 //     var songName = process.argv[3];
 // }
 
-// Reads argument 2, runs that command, runs function of the command 
+// Reads arguments 2 and 3, runs that command, runs function of the command 
 function switcher(arg2, arg3) {
 
     switch (arg2) {
