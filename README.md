@@ -8,3 +8,7 @@ Making a LIRI bot utilizing node
 5. Contain a link to a deployed version of the app
 6. Clearly list the technologies used in the app
 7. State your role in the app development
+
+
+using gifs:
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
