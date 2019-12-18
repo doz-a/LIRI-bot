@@ -31,18 +31,31 @@ Text file can be updated to run movie-this for a movie name, or concert-this for
 
 4. Include screenshots, gifs or videos of the app functioning
 
-### Technologies used
+## Technologies used
 1. Javascript
 2. NodeJS packages
 3. bands in town API
 4. OMDB API
 5. Spotify API
 
-### Developers
+## Developers
 1. Miguel Delos Santos
 
 
-## Using Gifs:
+# Commands Working Using Gifs:
+
+## concert-this
+With name of venue, venue location, date of event using moment MM/DD/YYYY
+![Alt Text](https://gyazo.com/8729ba02b5f6e83408b5a04b054b16b3)
+
+## spotify-this-song
+With artist, song name, song preview link, album
+
+## movie-this
+With Title of movie, year, IMDB rating, rotten tomatoes rating, country produced, language, plot, actors
+
+## do-what-it-says
+Runs spotify-this-song
 
 Readme break time! Random Kitty Gif:
 
