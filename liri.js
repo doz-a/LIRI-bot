@@ -27,10 +27,11 @@ function readText() {
 
     fs.readFile("random.txt", "utf8", function (error, data) {
         var dataArr = data.split(",");
+
+        // Calls switch case 
         switcher(dataArr[0], dataArr[1]);
     });
 };
-// readText();
 
 // Get movie data, run with movie-this "movie"
 function getMovie(movieName) {
@@ -43,7 +44,6 @@ function getMovie(movieName) {
     var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
     axios.get(queryURL).then(
         function (response) {
-            // console.log(response.data);
 
             // Movie info
             console.log(`Title: ${response.data.Title}
@@ -61,7 +61,8 @@ Actors: ${response.data.Actors}`
 
 // Start Music Function, run with 
 function getMusic(songName) {
-    // If no song name is input 
+
+    // If no song name, defaults The Sign by Ace
     if (!songName) {
         var songName = "The Sign Ace";
     }
@@ -96,15 +97,12 @@ function getConcert(bandName) {
             // Loop that shows all events 
             for (let i = 0; i < response.data.length; i++) {
                 const show = response.data[i];
-                // console.log(show);
 
                 // Name of venue 
                 console.log("Venue Name: " + show.venue.name);
 
                 // Location of venue 
                 console.log("Location: " + show.venue.city + ", " + show.venue.region + ", " + show.venue.country);
-                // console.log("State: " + show.venue.region);
-                // console.log("City: " + show.venue.city);
 
                 // Time of show 
                 console.log("Show Time: " + moment(show.datetime).format("MM/DD/YYYY"));
@@ -113,13 +111,6 @@ function getConcert(bandName) {
         }
     )
 }
-// getMusic("7 rings");
-
-// Node command to run the get Music function
-// if (process.argv[2] === "spotify-this-song") {
-
-//     var songName = process.argv[3];
-// }
 
 // Reads arguments 2 and 3, runs that command, runs function of the command 
 function switcher(arg2, arg3) {
