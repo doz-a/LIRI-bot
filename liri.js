@@ -41,7 +41,7 @@ function getMovie(movieName) {
         var movieName = "Mr. Nobody";
     }
 
-    var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
+    var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=[key]";
     axios.get(queryURL).then(
         function (response) {
 
@@ -90,7 +90,7 @@ function getMusic(songName) {
 
 // Get concert function, run with concert-this
 function getConcert(bandName) {
-    var queryURL = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
+    var queryURL = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=[key]";
     axios.get(queryURL).then(
         function (response) {
 
