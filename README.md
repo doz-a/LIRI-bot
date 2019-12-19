@@ -77,5 +77,7 @@ Runs spotify-this-song
 ![Alt Text](https://gyazo.com/8e90642bc4dec6d84a70ce65c7f15df1.gif)
 
 Thanks for reading!
+
 (//)<(0.0)>(//)
+
 12/18/2019
